@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GasparKritsch/KritschDeportivosReact/static/css/main.77485bab.css",
+    "main.js": "/GasparKritsch/KritschDeportivosReact/static/js/main.33ab8d7c.js",
+    "index.html": "/GasparKritsch/KritschDeportivosReact/index.html",
+    "main.77485bab.css.map": "/GasparKritsch/KritschDeportivosReact/static/css/main.77485bab.css.map",
+    "main.33ab8d7c.js.map": "/GasparKritsch/KritschDeportivosReact/static/js/main.33ab8d7c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77485bab.css",
+    "static/js/main.33ab8d7c.js"
+  ]
+}

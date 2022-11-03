@@ -1,38 +1,411 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading{
+  position: absolute;
+  top: 15vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #dadada;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loading h2{
+  color: black;
+  font-size: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBarContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 15vh;
+  background-color: white;
+}
+
+.logo{
+  font-size: 17px;
+  color: black;
+  font-weight: 600;
+  margin: 0 auto 0 50px;
+  width: 183px;
+}
+
+.navLinks{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.navLinks li a{
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+  width: 150px;
+  padding: 0 50px;
+}
+
+.icons{
+  margin: 0 50px 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.icons .menuIcon{
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  margin-left: 30px;
+  display: none;
+}
+
+.cartIconNumberContainer{
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.cartIconNumberContainer .cartIcon{
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.itemListContainer{
+  width: 100%;
+  min-height: 85vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: white;
+  background-color: #dadada;
+}
+
+.vehicle{
+  display: flex;
+  margin:  10px 8px;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.vehicle:hover{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.vehicle .vehicleImg{
+  width: 100%;
+  z-index: 50;
+}
+
+.vehicle .vehicleImg img{
+  width: 100%;
+}
+
+.vehicle .vehicleInfo{
+  padding: 5px 10px;
+  z-index: 100;
+}
+
+.vehicle .vehicleInfo p{
+  padding: 3px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.vehicle .vehicleInfo .precio{
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.itemDetailsContainer{
+  width: 100%;
+  display: flex;
+  height: 85vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #dadada;
+}
+
+.car{
+  width: 80%;
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.car img{
+  height: 400px;
+}
+
+.car .carInfo{
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: 300;
 }
 
-.App-link {
-  color: #61dafb;
+.car .carInfo p{
+  margin-bottom: 15px;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.car .carInfo .carInfoTitulo{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.itemCountContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itemCountContainer div{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.itemCountContainer div .count{
+  margin: 0 10px;
+}
+
+.itemCountContainer div button{
+  background-color: #dadada;
+  font-size: 15px;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.itemCountContainer .addToCartBtn{
+  margin: 10px 0;
+  font-size: 15px;
+  padding: 5px 15px;
+  background-color: #dadada;
+  border: none;
+  cursor: pointer;
+}
+
+.descripcion{
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+.descripcion h2{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.descripcion p{
+  text-align: justify;
+}
+
+.carritoContainer{
+  min-height: 85vh;
+  background-color: #dadada;
+  width: 100%;
+  display: flex;
+}
+
+.checkOutContainer{
+  width: 30%;
+  background-color: white;
+  min-height: 80vh;
+  margin: 15px 15px 15px 0;
+  padding: 15px;
+}
+
+.checkOutContainer h2{
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.checkOutContainer li{
+  margin-bottom: 15px;
+}
+
+.resumenDeCompra{
+  margin-bottom: 25px;
+}
+
+.checkOutItemTitle{
+  font-weight: 400;
+}
+
+.checkOutContainer .totalPrice{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.checkOutContainer .totalPrice h2{
+  font-size: 18px;
+}
+
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.formContainer h2{
+  margin-bottom: 25px;
+}
+
+.formContainer form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formContainer form h3{
+  font-size: 15px;
+  font-weight: 400;
+  padding: 5px 0;
+}
+
+.formContainer form input{
+  width: 100%;
+  border: none;
+  background-color: #ededed;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.formContainer form input:focus{
+  outline: none;
+}
+
+.formContainer form button{
+  margin: 25px 0 0 0;
+  font-size: 15px;
+  font-size: 15px;
+  padding: 5px 15px;
+  background-color: #dadada;
+  border: none;
+  cursor: pointer;
+}
+
+.checkOutContainer .checkOutBtns{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.checkOutContainer .checkOutBtns button{
+  margin: 10px 0;
+  font-size: 15px;
+  font-size: 15px;
+  padding: 5px 15px;
+  background-color: #dadada;
+  border: none;
+  cursor: pointer;
+}
+
+.checkOutContainer .checkOutBtns button a{
+  color: black;
+} 
+
+.addedToCartContainer{
+  display: flex;
+  width: 70%;
+  padding: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #dadada;
+}
+
+.addedToCartContainer .cartVehicle{
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+.cartVehicle .removeFromCartIcon{
+  margin: 0 10px 0 auto;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cartVehicle img{
+  height: 150px;
+  margin: 0 0 0 30px;
+}
+
+.cartVehicle div{
+  text-align: start;
+  font-size: 15px;
+  margin: 0 auto 0 30px;
+}
+
+.cartVehicleTitle{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media screen and (max-width:1200px) {
+  .itemListContainer a .vehicle{
+    min-height: 308px;
   }
 }
+
+@media screen and (max-width:900px){
+  #root{
+    overflow: hidden;
+  }
+
+  .navBarContainer .navLinks{
+    position: absolute;
+    top: 15vh;
+    height: 85vh;
+    width: 100%;
+    left: 0;
+    transform: translateX(100%);
+    transition: 0.4s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ededed;
+  }
+
+  .navBarContainer .icons .menuIcon{
+    display: block;
+  }
+
+  .navBarContainer .menuIconActive{
+    transform: translateX(0%);
+  }
+}
+

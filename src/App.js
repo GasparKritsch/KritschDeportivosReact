@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, HashRouter } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
@@ -9,7 +9,7 @@ import CarritoPage from './components/CarritoPage';
 function App() {
   return (
     <CartContextProvider>
-      <HashRouter>
+      <BrowserRouter>
         <NavBar />
         <Routes>
           <Route path="/KritschDeportivosReact/" element={<ItemListContainer />}/>
@@ -17,7 +17,7 @@ function App() {
           <Route path="/KritschDeportivosReact/item/:id" element={<ItemDetailContainer />}/>
           <Route path="/KritschDeportivosReact/carrito" element={<CarritoPage />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </CartContextProvider>
   );
 }

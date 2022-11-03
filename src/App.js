@@ -9,7 +9,7 @@ import CarritoPage from './components/CarritoPage';
 function App() {
   return (
     <CartContextProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <NavBar />
         <Routes>
           <Route path="/" element={<ItemListContainer />}/>

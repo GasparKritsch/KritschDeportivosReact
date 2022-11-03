@@ -81,7 +81,7 @@ const CarritoPage = () => {
                     </form>
                 </div>
                 <div className="checkOutBtns">
-                    <button><Link to="/">Seguir comprando</Link></button>
+                    <button><Link to="/KritschDeportivosReact/">Seguir comprando</Link></button>
                     <button onClick={ () => vaciarCarrito()}>Vaciar Carrito</button>
                 </div>
                 <h2 className="resumenDeCompra">Resumen de compra:</h2>

@@ -4,7 +4,7 @@ import Item from "./Item";
 const ItemList = ({vehicles}) => {
     
     return (vehicles.map(vehicle => (
-        <Link to={`/item/${vehicle.id}`} key={vehicle.id}>
+        <Link to={`/KritschDeportivosReact/item/${vehicle.id}`} key={vehicle.id}>
             <Item vehicle = {vehicle}/>
         </Link>
     )))

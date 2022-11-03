@@ -12,10 +12,10 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<ItemListContainer />}/>
-          <Route path="/category/:categoryId" element={<ItemListContainer />}/>
-          <Route path="/item/:id" element={<ItemDetailContainer />}/>
-          <Route path="/carrito" element={<CarritoPage />} />
+          <Route path="/KritschDeportivosReact/" element={<ItemListContainer />}/>
+          <Route path="/KritschDeportivosReact/category/:categoryId" element={<ItemListContainer />}/>
+          <Route path="/KritschDeportivosReact/item/:id" element={<ItemDetailContainer />}/>
+          <Route path="/KritschDeportivosReact/carrito" element={<CarritoPage />} />
         </Routes>
       </BrowserRouter>
     </CartContextProvider>

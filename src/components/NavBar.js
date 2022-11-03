@@ -19,12 +19,12 @@ const NavBar = () => {
         <div className="navBarContainer">
             <Link to="/"><h1 className="logo">Kritsch Deportivos</h1></Link>
             <ul className="navLinks">
-                <li onClick={handleLinkClick}><Link to="/category/auto">Autos</Link></li>
-                <li onClick={handleLinkClick}><Link to="/category/suv">Suv</Link></li>
-                <li onClick={handleLinkClick}><Link to="/category/camioneta">Camionetas</Link></li>
+                <li onClick={handleLinkClick}><Link to="/KritschDeportivosReact/category/auto">Autos</Link></li>
+                <li onClick={handleLinkClick}><Link to="/KritschDeportivosReact/category/suv">Suv</Link></li>
+                <li onClick={handleLinkClick}><Link to="/KritschDeportivosReact/category/camioneta">Camionetas</Link></li>
             </ul>
             <div className="icons">
-                <Link to="/carrito"><CartWidget /></Link>
+                <Link to="/KritschDeportivosReact/carrito"><CartWidget /></Link>
                 <IoMenu onClick={handleMenuClick} className="menuIcon" />
             </div>
         </div>
